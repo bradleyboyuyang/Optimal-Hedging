@@ -49,18 +49,18 @@ $$\text{Gain} = 1- \cfrac{\sum(\Delta f  - \delta_{\text{SABR}}\Delta S)^2}{\sum
 <img src="./presentation/imgs/impliedvol.png" width="750">
 
 
-#### BS delta (Blue), SABR delta (Red), Bartlett's delta (Green)
+#### BS Delta (Blue), SABR Delta (Red), Bartlett's Delta (Green)
 <img src="./presentation/imgs/comparison.png" width="750">
 
-#### Bartlett's delta for different maturities
+#### Bartlett's Delta for Different Maturities
 <img src="./presentation/imgs/bartlett.png" width="750">
 
 
-#### Hedging parameters evolution
+#### Hedging Parameters Evolution
 <img src="./presentation/imgs/param.png" width="750">
 
 
-#### Hedging gain for Bartlett's delta
+#### Hedging Gain for Bartlett's Delta
 <img src="./presentation/imgs/gain_sse.png" width="750">
 
 
