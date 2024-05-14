@@ -1,18 +1,20 @@
 # Optimal-Hedging
  
-In this project we implement optimal delta hedging in Hull and White (2016) using the industry-famous stochastic volatility model, the SABR model. The SABR model is calibrated to real SPX 500 options data and the performance of the delta hedging strategy is evaluated.
+In this project we implement optimal delta hedging on SPX 500 options data using the industry-famous stochastic volatility model, the SABR model. We calibrate the SABR model on one-month SPX option time series and evaluated the heding performance of different deltas.
+
+All implementations are based on Bartlett's delta from Hagan (2020) and Optimal Delta Hedging from Hull and White (2016).
 
 ## Scripts
 - `data`: SPX 500 options data from 2023-02-01 to 2023-02-28 from WRDS
-- `papers`: a list of papers used for this project, mostly on the Bartlett's delta from Hagan (2020) and Optimal Delta Hedging from Hull and White (2016)
+- `papers`: a list of papers used for this project
 - `presentation`: presentation slides for the project
 - `sabr_calibration`: an example of SABR model implementation and calibration 
-- `optimal_hedging`: main notebook that implements SABR model calibration, optimal delta hedging, and hedging performance evaluation
+- `optimal_hedging`: main notebook that implements SABR model and optimal delta hedging
 
 ## Overview
 
 ### SABR Model
-
+SABR model is a stochastic volatility model given by
 $$
 \begin{align*}
 dF(t) &= \sigma(t)(F(t)+\theta)^{\beta}dW_1(t), F(0)=f\\
