@@ -9,8 +9,8 @@ Most implementations in this project are based on Bartlett's delta in the SABR m
 - `data`: SPX 500 options data from 2023-02-01 to 2023-02-28 from WRDS
 - `papers`: a list of papers used for this project
 - `presentation`: presentation slides for the project
-- `sabr_calibration`: an example of SABR model implementation and calibration 
-- `optimal_hedging`: main notebook that implements SABR model and optimal delta hedging
+- `sabr_calibration.ipynb`: an example of SABR model implementation and calibration 
+- `optimal_hedging.ipynb`: main notebook that calibrates SABR model and optimal delta hedging
 
 ## Overview
 
