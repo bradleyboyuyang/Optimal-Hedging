@@ -11,12 +11,14 @@ In this project we implement optimal delta hedging in Hull and White (2016) usin
 
 ## Overview
 
-### SABR Model
+#### SABR Model
 
+$$
 \begin{align*}
 dF(t) &= \sigma(t)(F(t)+\theta)^{\beta}dW_1(t), F(0)=f\\
 d\sigma(t) &= \nu\sigma(t)dW_2(t), \sigma(0)=\sigma_0\\
 \end{align*}
+$$
 
 where $W_1(t)$ and $W_2(t)$ are two correlated Wiener processes with correlation $\rho$, namely, $dW_1(t)dW_2(t) = \rho dt$.
 
@@ -25,15 +27,7 @@ where $W_1(t)$ and $W_2(t)$ are two correlated Wiener processes with correlation
 - $\nu$: volatility of volatility (volvol)
 - $\theta$: shift parameter to avoid negative rates
 
-
-
-
-Implied volatility smile calibration
-
-<img src="./presentation/imgs/impliedvol.png" width="750">
-
-
-### SABR Delta and Bartlett's Delta
+#### SABR Delta and Bartlett's Delta
 
 The SABR delta is given by
 $$\Delta^{\text{SABR}} = \frac{\partial B}{\partial F} + \frac{\partial B}{\partial \sigma}  \frac{\partial \sigma_{\text{imp}}}{\partial F}  $$
@@ -45,32 +39,33 @@ $$\Delta^{\text{Bartlett}} = \frac{\partial B}{\partial F} + \frac{\partial B}{\
 It is shown in Hagan (2019) that the Bartlett's delta is the optimal delta for hedging in the SABR model, which can be approximated by
 $$\Delta^{mod}\approx \Delta^{BS}+\text{Vega}^{BS}\times \eta$$
 
-- BS delta (blue dot), SABR delta (red), versus Bartlett's delta (green)
-<img src="./presentation/imgs/comparison.png" width="750">
-
-- Bartlett's delta for different maturities
-<img src="./presentation/imgs/bartlett.png" width="750">
-
-
-
-### Optimal Delta Hedging
-
 In Hull, J., and White (2016), the effectiveness of a hedge is measured by the $Gain$ metric, defined as the percentage reduction in the sum of squared residuals resulting from the hedge, i.e.
 $$\text{Gain} = 1- \cfrac{\sum(\Delta f  - \delta_{\text{SABR}}\Delta S)^2}{\sum(\Delta f  - \delta_{\text{BS}}\Delta S)^2}$$
 
+## Results
+#### Implied volatility Smile Calibration
 
-- Hedging parameters evolution
+<img src="./presentation/imgs/impliedvol.png" width="750">
+
+
+#### BS delta (Blue), SABR delta (Red), Bartlett's delta (Green)
+<img src="./presentation/imgs/comparison.png" width="750">
+
+#### Bartlett's delta for different maturities
+<img src="./presentation/imgs/bartlett.png" width="750">
+
+
+#### Hedging parameters evolution
 <img src="./presentation/imgs/param.png" width="750">
 
 
-- Hedging gain for Bartlett's delta
+#### Hedging gain for Bartlett's delta
 <img src="./presentation/imgs/gain_sse.png" width="750">
 
 
 
-### SABR Delta vs. Bartlett's Delta
+#### SABR Delta vs. Bartlett's Delta
 
-- Relative of Bartlett’s delta over SABR delta
 <img src="./presentation/imgs/gain_relative.png" width="750">
 
 
