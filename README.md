@@ -48,28 +48,28 @@ In Hull and White (2016), the effectiveness of a hedge is measured by the $Gain$
 $$\text{Gain} = 1- \cfrac{\sum(\Delta f  - \delta_{\text{SABR}}\Delta S)^2}{\sum(\Delta f  - \delta_{\text{BS}}\Delta S)^2}$$
 
 ## Results
-### Implied volatility Smile Calibration
+#### Implied volatility Smile Calibration
 
 <img src="./presentation/imgs/impliedvol.png" width="750">
 
 
-### BS Delta (Blue), SABR Delta (Red), Bartlett's Delta (Green)
+#### BS Delta (Blue), SABR Delta (Red), Bartlett's Delta (Green)
 <img src="./presentation/imgs/comparison.png" width="750">
 
-### Bartlett's Delta for Different Maturities
+#### Bartlett's Delta for Different Maturities
 <img src="./presentation/imgs/bartlett.png" width="750">
 
 
-### Hedging Parameters Evolution
+#### Hedging Parameters Evolution
 <img src="./presentation/imgs/param.png" width="750">
 
 
-### Hedging Gain for Bartlett's Delta
+#### Hedging Gain for Bartlett's Delta
 <img src="./presentation/imgs/gain_sse.png" width="750">
 
 
 
-### SABR Delta vs. Bartlett's Delta
+#### SABR Delta vs. Bartlett's Delta
 
 <img src="./presentation/imgs/gain_relative.png" width="750">
 
