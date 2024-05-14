@@ -11,7 +11,7 @@ In this project we implement optimal delta hedging in Hull and White (2016) usin
 
 ## Overview
 
-#### SABR Model
+### SABR Model
 
 $$
 \begin{align*}
@@ -27,7 +27,7 @@ where $W_1(t)$ and $W_2(t)$ are two correlated Wiener processes with correlation
 - $\nu$: volatility of volatility (volvol)
 - $\theta$: shift parameter to avoid negative rates
 
-#### SABR Delta and Bartlett's Delta
+### Optimal Delta Hedging
 
 The SABR delta is given by
 $$\Delta^{\text{SABR}} = \frac{\partial B}{\partial F} + \frac{\partial B}{\partial \sigma}  \frac{\partial \sigma_{\text{imp}}}{\partial F}  $$
@@ -39,6 +39,7 @@ $$\Delta^{\text{Bartlett}} = \frac{\partial B}{\partial F} + \frac{\partial B}{\
 It is shown in Hagan (2019) that the Bartlett's delta is the optimal delta for hedging in the SABR model, which can be approximated by
 $$\Delta^{mod}\approx \Delta^{BS}+\text{Vega}^{BS}\times \eta$$
 
+### Hedging Performance Evaluation
 In Hull, J., and White (2016), the effectiveness of a hedge is measured by the $Gain$ metric, defined as the percentage reduction in the sum of squared residuals resulting from the hedge, i.e.
 $$\text{Gain} = 1- \cfrac{\sum(\Delta f  - \delta_{\text{SABR}}\Delta S)^2}{\sum(\Delta f  - \delta_{\text{BS}}\Delta S)^2}$$
 
@@ -60,7 +61,7 @@ $$\text{Gain} = 1- \cfrac{\sum(\Delta f  - \delta_{\text{SABR}}\Delta S)^2}{\sum
 
 
 #### Hedging gain for Bartlett's delta
-<img src="./presentation/imgs/gain_sse.png" width="750">
+<img src="./presentation/imgs/gain_sse.png" width="700">
 
 
 
