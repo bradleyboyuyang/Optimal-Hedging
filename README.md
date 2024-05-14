@@ -1,6 +1,8 @@
 # Optimal-Hedging
- 
-In this project we implement optimal delta hedging on SPX 500 options data using the industry-famous stochastic volatility model, the SABR model. We calibrate the SABR model on one-month SPX option time series and evaluated the heding performance of different deltas.
+
+In this project we implement optimal delta hedging on SPX 500 options under the industry-famous stochastic volatility model, the SABR model. SPX option time series are dynamically hedged using SABR delta and Bartlett's delta.
+
+
 
 ## References
 Most implementations in this project are based on Bartlett's delta in the SABR model by Hagan and Andrew (2019) and Optimal Delta Hedging by Hull and White (2016).
@@ -77,7 +79,7 @@ $$\text{Gain} = 1- \cfrac{\sum(\Delta f  - \delta_{\text{SABR}}\Delta S)^2}{\sum
 
 
 
-## Short Conclusion
+## Short Summary
 - SABR model calibrates the implied volatility smile of SPX 500 options data extremely well.
 - Both SABR delta and Bartlett’s delta are effective in hedging the options, much better than Black-Scholes delta.
 - Bartlett’s delta performs slightly but consistently better than SABR delta. 
