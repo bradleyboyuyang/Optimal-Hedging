@@ -61,7 +61,7 @@ $$\text{Gain} = 1- \cfrac{\sum(\Delta f  - \delta_{\text{SABR}}\Delta S)^2}{\sum
 
 
 #### Hedging gain for Bartlett's delta
-<img src="./presentation/imgs/gain_sse.png" width="700">
+<img src="./presentation/imgs/gain_sse.png" width="750">
 
 
 
