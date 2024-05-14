@@ -31,6 +31,8 @@ where $W_1(t)$ and $W_2(t)$ are two correlated Wiener processes with correlation
 - $\nu$: volatility of volatility (volvol)
 - $\theta$: shift parameter to avoid negative rates
 
+The SABR model gains its popularity due to its ability to capture the volatility smile observed in the market. It is a common practice to set $\beta=0.5$ for interest rate derivatives and $\beta=1$ for equity options.
+
 ### Optimal Delta Hedging
 
 The SABR delta is given by
